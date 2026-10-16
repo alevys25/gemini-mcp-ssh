@@ -8,8 +8,6 @@ mcp = FastMCP("RemoteSSHGateway")
 @mcp.tool()
 def run_remote_command(command: str) -> str:
     """Executes a command securely on the target remote Linux server over SSH."""
-    if not SSH_PASSWORD:
-        return "Error: SSH password environment variable is missing on the gateway app."
 
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
