@@ -4,11 +4,6 @@ import os
 
 mcp = FastMCP("RemoteSSHGateway")
 
-SSH_PASSWORD = os.environ.get("MY_SERVER_USERNAME")
-SSH_PASSWORD = os.environ.get("MY_SERVER_PORT")
-SSH_PASSWORD = os.environ.get("MY_SERVER_DOMAIN")
-SSH_PASSWORD = os.environ.get("MY_SERVER_PASSWORD")
-
 
 @mcp.tool()
 def run_remote_command(command: str) -> str:
