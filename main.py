@@ -33,5 +33,5 @@ if __name__ == "__main__":
     # Cloud Run populates the PORT env variable automatically
     port = int(os.environ.get("PORT", 8000))
     print("Getting ready to start SSH with port %d!" % port)
-    mcp.run(transport="http", port=port)
+    mcp.run(transport="http", host="0.0.0.0", port=port)
 
